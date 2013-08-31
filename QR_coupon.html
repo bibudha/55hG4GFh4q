@@ -22,12 +22,15 @@
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="cordova.js" type="text/javascript"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.js"></script>
 <script type="text/javascript">
 		$(document).ready(function() {
 		var qrCode = getUrlVars()['qrCode'];
 		var hrsCheck = getUrlVars()['hrsCheck'];
 		var checkInTargetAmt = getUrlVars()['checkInTargetAmt'];
-		$('.roundbutton btn').click(function(){
+		$('.btn-text').click(function(){
 				console.log('scanning');
 				alert('coming');
 				try {
@@ -40,6 +43,13 @@
 					checkInTargetAmt++;
 					
 					alert("success");
+					var coupon_counter=$('#coupon-counter').val();
+					coupon_counter++;
+					for(var i=1;i<=coupon_counter;i++)
+					{
+					$('.coupon_counter').html(i+'/'+checkInTargetAmt);
+					}
+					$('#coupon-counter').val(coupon_counter);
 					}
 					else
 					{
@@ -63,9 +73,7 @@
 		})
 
 </script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="js/jquery.mobile.js"></script>
+
 
 </head>
 <body>
