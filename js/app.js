@@ -85,7 +85,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
 	}
 	function wufooActive(src,exitDone) {
 		
-         var ref = window.open(src, '_self');
+         var ref = window.open(src, '_self','location=yes');
          
          ref.addEventListener('exit', function() {
 		 window.location.href = exitDone;
@@ -185,7 +185,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   	var nav_url="http://docs.google.com/viewer?url="+ pdfUrl ;
   	//alert(nav_url);
   	$("#header_title").html(pdfTitle);
-  	window.open(nav_url, '_self','location=yes');
+  	window.open(nav_url, '_blank','location=yes');
   	//window.location.href=nav_url;
   	//navigator.load.url(pdfUrl);
   	//var ref = window.open(pdfUrl, '_blank');
