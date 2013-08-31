@@ -1655,7 +1655,7 @@ function RssTabInfo() {
 				//alert(featureName);
 			   mobileBackground = item.mobileBackground;
 			  
-			   $('body').css({ 'background-image': 'url(" '+ baseUrl + mobileBackground + '")' });
+			  
                 if (i == 0) { addBackground(item); }
                 if (i % 2 == 0) {
                     className = 'evenbg';
@@ -1676,14 +1676,15 @@ function RssTabInfo() {
 
                     error = item.error;
                 }
+                 $(body).css('background-image','url(" '+ baseUrl + mobileBackground + '")' );
 
             });
             data += '</ul>';
         }
-		$('body').css({ 'background-image': 'url(" '+ baseUrl + mobileBackground + '")' });
+		
         $('#main-content').html(data);
 			
-	
+	$(body).css('background-image','url(" '+ baseUrl + mobileBackground + '")' );
 		if (error) {
             $('#main-content').html(error);
         }
