@@ -185,7 +185,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   	var nav_url="http://docs.google.com/viewer?url="+ pdfUrl ;
   	//alert(nav_url);
   	$("#header_title").html(pdfTitle);
-  	window.open(nav_url, '_blank');
+  	window.open(nav_url, '_system');
   	//window.location.href=nav_url;
   	//navigator.load.url(pdfUrl);
   	//var ref = window.open(pdfUrl, '_blank');
