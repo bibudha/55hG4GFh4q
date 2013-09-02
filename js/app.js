@@ -144,7 +144,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   		$.each(html, function (i,item){  
   			//alert("empty");
   			// onclick="window.open('+item.urlofFile+', '_blank', 'location=yes');"
-		 
+
   			$.each(html,function(i,item){
   				//var pdf_url=;
   			htmlData += '<li><a href="pdf_d.html?itemUrl='+ item.urlOfFile +'&itemName=' + item.name + '" rel="external" >' + item.name + '</a></li>';
@@ -152,7 +152,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   			htmlData +='</ul>';	
   			//alert(htmlData);
   		})
-		
+
   		}else{
   			//pdf_d.html?itemId='+ item.wuFooId + '&transferId ='+ featureRelId + 'mId='+ featureId +'&touchId=' + userSiteId + '
   			// onclick="window.open('+item.urlofFile+', '_blank', 'location=yes');"
@@ -164,7 +164,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   			htmlData +='</ul>';	
   			//alert(htmlData);
   		}
-		
+
   		$('#main-content').html(htmlData);	
   		 try {
         $("#aboutclass").listview('refresh');
@@ -176,7 +176,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
       }
       function pdfById()
       {
-	  
+
   	var pdfUrl = getUrlVars()['itemUrl'];
   	var pdfTitle= getUrlVars()['itemName'];
   	//alert(pdfUrl);
@@ -185,8 +185,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   	var nav_url="http://docs.google.com/viewer?url="+ pdfUrl ;
   	//alert(nav_url);
   	$("#header_title").html(pdfTitle);
-  	alert(nav_url);
-  	window.open(nav_url,'_system');
+  	window.open(nav_url, '_self','location=yes');
   	//window.location.href=nav_url;
   	//navigator.load.url(pdfUrl);
   	//var ref = window.open(pdfUrl, '_blank');
@@ -206,10 +205,12 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
   		//$('#main-content').html(htmlData);	
   		}
   	}); */
-	
+
       }
    	
 	/// <reference path="script.js" />
+
+	
 
 var app = {
     podcastPlayer: function () {
