@@ -40,8 +40,7 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
     <preference name="webviewbounce"    value="true" />
-    <preference name="stay-in-webview" value="true" />
-	<preference name="prerendered-icon" value="false"/>
+   <preference name="prerendered-icon" value="false"/>
 
     <icon src="icon.png" />
     <icon src="res/icon/android/_app_icon_32x32.png"   gap:platform="android"    gap:density="ldpi" />
