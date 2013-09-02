@@ -85,7 +85,7 @@ var DescriptionVoice,EmailVoice,subjectVoice,mobileBackgroundVoice; // variables
 	}
 	function wufooActive(src,exitDone) {
 		
-         var ref = window.open(src, '_self');
+         var ref = window.open(src, '_system');
          
          ref.addEventListener('exit', function() {
 		 window.location.href = exitDone;
